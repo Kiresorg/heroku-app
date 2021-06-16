@@ -16,10 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "heroku-app-ci"
-          heroku_email: "erik@developintellligence.com"
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY}}
+        heroku_app_name: "heroku-app-ci"
+        heroku_email: "erik@developintellligence.com"
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
